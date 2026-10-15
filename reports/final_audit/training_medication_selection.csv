@@ -1,0 +1,24 @@
+Medication,Training non-No count,Excluded
+metformin,10402,False
+repaglinide,637,False
+nateglinide,331,False
+chlorpropamide,50,False
+glimepiride,2542,False
+acetohexamide,1,True
+glipizide,6297,False
+glyburide,5442,False
+tolbutamide,12,False
+pioglitazone,3684,False
+rosiglitazone,3310,False
+acarbose,135,False
+miglitol,14,False
+troglitazone,3,False
+tolazamide,21,False
+examide,0,True
+citoglipton,0,True
+insulin,24977,False
+glyburide-metformin,357,False
+glipizide-metformin,6,False
+glimepiride-pioglitazone,0,True
+metformin-rosiglitazone,2,True
+metformin-pioglitazone,0,True

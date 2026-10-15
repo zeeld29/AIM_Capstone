@@ -1,0 +1,5 @@
+Feature,Grid low,Grid high,Observed min,Observed max,Validation fraction within grid
+age_numeric,5.0,95.0,5,95,1.0
+time_in_hospital,1.0,14.0,1,14,1.0
+num_lab_procedures,4.0,73.0,1,121,0.903296493902439
+number_inpatient,0.0,1.0,0,9,0.963891006097561

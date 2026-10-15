@@ -1,0 +1,51 @@
+{
+  "execution_mode": "fresh IPython process per notebook, every code cell in order",
+  "python": "3.13.12",
+  "status": "passed",
+  "notebooks": [
+    {
+      "notebook": "01_problem_statement.ipynb",
+      "status": "passed",
+      "executed_code_cells": 0,
+      "seconds": 0.0,
+      "sha256": "911a7a77a6fa915a1b9aacec90ff541d4127f2eebb2cf7b500c5c8f12ab040fe"
+    },
+    {
+      "notebook": "02_data_cleaning_split.ipynb",
+      "status": "passed",
+      "executed_code_cells": 32,
+      "seconds": 3.41,
+      "sha256": "f8efe1218e5a8f174081604822edf91c2035429cbf043f05af2f7b305a0ebbd7"
+    },
+    {
+      "notebook": "03_eda.ipynb",
+      "status": "passed",
+      "executed_code_cells": 21,
+      "seconds": 8.97,
+      "sha256": "484d4b4434c449c19eb1bf5403baf84943a7c04591a845b6ede88977da09bb3d"
+    },
+    {
+      "notebook": "04_feature_engineering.ipynb",
+      "status": "passed",
+      "executed_code_cells": 15,
+      "seconds": 0.71,
+      "sha256": "13e9744fff2550df41c0263804c2c1717252961a45155f523c7c637c3907e4b6"
+    },
+    {
+      "notebook": "05_model_evaluation.ipynb",
+      "status": "passed",
+      "executed_code_cells": 86,
+      "seconds": 81.22,
+      "sha256": "8ebca40bcff104720d9a366f6e00e40bf4ae1117e131a8b482d58103fe5ed4bc"
+    },
+    {
+      "notebook": "06_final_results_&_conclusions.ipynb",
+      "status": "passed",
+      "executed_code_cells": 3,
+      "seconds": 0.46,
+      "sha256": "d67e8619bc94bbbdb76a090050c7bc8ed3281464a69f34dd2fe62e4aacd25740"
+    }
+  ],
+  "verified_client_date": "2026-10-15",
+  "notes": "All six notebooks executed in order. Markdown metric summaries refreshed afterward; code unchanged after execution."
+}

@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "verified_client_date": "2026-10-15",
+  "execution_summary": "execution_summary.json",
+  "checks": {
+    "training_only_medication_exclusions": true,
+    "exact_patient_manifest": true,
+    "all_69970_patients_matched": true,
+    "ambiguous_rows": 0,
+    "unmatched_rows": 0,
+    "cross_split_patient_overlap": 0
+  },
+  "final_test_metrics": [
+    {
+      "Model": "Tuned gradient boosting",
+      "Threshold": "0.1",
+      "Average precision": "0.1866043776617103",
+      "ROC-AUC": "0.6523020670969841",
+      "Precision": "0.1534788540245566",
+      "Recall": "0.47770700636942676",
+      "F1": "0.2323180175529169",
+      "Patients flagged": "2932",
+      "Flagged (%)": "27.934451219512198"
+    }
+  ]
+}

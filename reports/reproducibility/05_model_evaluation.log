@@ -1,0 +1,172 @@
+05_model_evaluation.ipynb: cell 3 START # Import tools
+05_model_evaluation.ipynb: cell 3 PASS (0.2s elapsed)
+05_model_evaluation.ipynb: cell 5 START # Load split data with engineered features
+05_model_evaluation.ipynb: cell 5 PASS (0.4s elapsed)
+05_model_evaluation.ipynb: cell 7 START # Separate feature and columns
+05_model_evaluation.ipynb: cell 7 PASS (0.4s elapsed)
+05_model_evaluation.ipynb: cell 9 START # Identify categorical columns
+05_model_evaluation.ipynb: cell 9 PASS (0.4s elapsed)
+05_model_evaluation.ipynb: cell 11 START # Identify numerical columns
+05_model_evaluation.ipynb: cell 11 PASS (0.5s elapsed)
+05_model_evaluation.ipynb: cell 13 START # Import processing tools
+05_model_evaluation.ipynb: cell 13 PASS (1.2s elapsed)
+05_model_evaluation.ipynb: cell 15 START # Define numeric preprocessing
+05_model_evaluation.ipynb: cell 15 PASS (1.2s elapsed)
+05_model_evaluation.ipynb: cell 17 START # Define Categorical Preprocessing
+05_model_evaluation.ipynb: cell 17 PASS (1.2s elapsed)
+05_model_evaluation.ipynb: cell 19 START # Combine both numeric and categorical preprocessing
+05_model_evaluation.ipynb: cell 19 PASS (1.2s elapsed)
+05_model_evaluation.ipynb: cell 22 START # Import modeling tools
+05_model_evaluation.ipynb: cell 22 PASS (1.2s elapsed)
+05_model_evaluation.ipynb: cell 24 START # Train dummy baseline
+05_model_evaluation.ipynb: cell 24 PASS (1.2s elapsed)
+05_model_evaluation.ipynb: cell 26 START # Logistic regression pipeline
+05_model_evaluation.ipynb: cell 26 PASS (1.9s elapsed)
+05_model_evaluation.ipynb: cell 28 START # Predict on validation data
+05_model_evaluation.ipynb: cell 28 PASS (2.0s elapsed)
+05_model_evaluation.ipynb: cell 30 START # Compare validation performance
+05_model_evaluation.ipynb: cell 30 PASS (2.1s elapsed)
+05_model_evaluation.ipynb: cell 32 START # logistic regression confusion matrix
+05_model_evaluation.ipynb: cell 32 PASS (2.1s elapsed)
+05_model_evaluation.ipynb: cell 34 START # Save baseline validation metrics
+05_model_evaluation.ipynb: cell 34 PASS (2.1s elapsed)
+05_model_evaluation.ipynb: cell 36 START # Metric comparison for different thresholds
+05_model_evaluation.ipynb: cell 36 PASS (2.2s elapsed)
+05_model_evaluation.ipynb: cell 39 START # Save threshold comparison
+05_model_evaluation.ipynb: cell 39 PASS (2.2s elapsed)
+05_model_evaluation.ipynb: cell 43 START # Import tools
+05_model_evaluation.ipynb: cell 43 PASS (2.2s elapsed)
+05_model_evaluation.ipynb: cell 45 START # Define feature selector
+05_model_evaluation.ipynb: cell 45 PASS (2.2s elapsed)
+05_model_evaluation.ipynb: cell 47 START # Selected feature pipeline
+05_model_evaluation.ipynb: cell 47 PASS (2.2s elapsed)
+05_model_evaluation.ipynb: cell 49 START # Fit using training data only
+05_model_evaluation.ipynb: cell 49 PASS (5.6s elapsed)
+05_model_evaluation.ipynb: cell 51 START # Check how many features were retained
+05_model_evaluation.ipynb: cell 51 PASS (5.7s elapsed)
+05_model_evaluation.ipynb: cell 53 START # View the selection result
+05_model_evaluation.ipynb: cell 53 PASS (5.7s elapsed)
+05_model_evaluation.ipynb: cell 55 START # Compare validation performance of logistic regression using full features vs. selected features
+05_model_evaluation.ipynb: cell 55 PASS (5.8s elapsed)
+05_model_evaluation.ipynb: cell 58 START # Import TruncatedSVD
+05_model_evaluation.ipynb: cell 58 PASS (5.8s elapsed)
+05_model_evaluation.ipynb: cell 60 START # Dimensionality-reduction pipeline
+05_model_evaluation.ipynb: cell 60 PASS (5.8s elapsed)
+05_model_evaluation.ipynb: cell 62 START # Train on training data
+05_model_evaluation.ipynb: cell 62 PASS (6.5s elapsed)
+05_model_evaluation.ipynb: cell 64 START # Variance
+05_model_evaluation.ipynb: cell 64 PASS (6.5s elapsed)
+05_model_evaluation.ipynb: cell 66 START # Predict on validation data
+05_model_evaluation.ipynb: cell 66 PASS (6.5s elapsed)
+05_model_evaluation.ipynb: cell 68 START # Compare the following logistic regression models: (1) full (2) selected (3) SVD components
+05_model_evaluation.ipynb: cell 68 PASS (6.6s elapsed)
+05_model_evaluation.ipynb: cell 72 START from sklearn.ensemble import RandomForestClassifier
+05_model_evaluation.ipynb: cell 72 PASS (6.7s elapsed)
+05_model_evaluation.ipynb: cell 74 START # Random forest pipeline
+05_model_evaluation.ipynb: cell 74 PASS (6.8s elapsed)
+05_model_evaluation.ipynb: cell 76 START # fit the model using training dataset
+05_model_evaluation.ipynb: cell 76 PASS (8.1s elapsed)
+05_model_evaluation.ipynb: cell 78 START # Predict using the validation split
+05_model_evaluation.ipynb: cell 78 PASS (8.3s elapsed)
+05_model_evaluation.ipynb: cell 80 START # Compare random forest with the selected logistic regression 
+05_model_evaluation.ipynb: cell 80 PASS (8.3s elapsed)
+05_model_evaluation.ipynb: cell 82 START # Show if the moodel overfits
+05_model_evaluation.ipynb: cell 82 PASS (8.8s elapsed)
+05_model_evaluation.ipynb: cell 85 START # Hyperparamter tuning
+05_model_evaluation.ipynb: cell 85 PASS (8.8s elapsed)
+05_model_evaluation.ipynb: cell 87 START param_grid = {
+05_model_evaluation.ipynb: cell 87 PASS (8.8s elapsed)
+05_model_evaluation.ipynb: cell 89 START cv = StratifiedKFold(
+05_model_evaluation.ipynb: cell 89 PASS (8.8s elapsed)
+05_model_evaluation.ipynb: cell 91 START tuning_pipeline = clone(forest_model)
+05_model_evaluation.ipynb: cell 91 PASS (8.8s elapsed)
+05_model_evaluation.ipynb: cell 93 START search.fit(X_train, y_train)
+05_model_evaluation.ipynb: cell 93 PASS (27.6s elapsed)
+05_model_evaluation.ipynb: cell 95 START print("Best settings:", search.best_params_)
+05_model_evaluation.ipynb: cell 95 PASS (27.6s elapsed)
+05_model_evaluation.ipynb: cell 97 START cv_results = pd.DataFrame(search.cv_results_)
+05_model_evaluation.ipynb: cell 97 PASS (27.6s elapsed)
+05_model_evaluation.ipynb: cell 99 START tuned_forest = search.best_estimator_
+05_model_evaluation.ipynb: cell 99 PASS (27.7s elapsed)
+05_model_evaluation.ipynb: cell 101 START tuned_train_probability = tuned_forest.predict_proba(X_train)[:, 1]
+05_model_evaluation.ipynb: cell 101 PASS (28.0s elapsed)
+05_model_evaluation.ipynb: cell 103 START forest_threshold_results = []
+05_model_evaluation.ipynb: cell 103 PASS (28.0s elapsed)
+05_model_evaluation.ipynb: cell 106 START from sklearn.ensemble import HistGradientBoostingClassifier
+05_model_evaluation.ipynb: cell 106 PASS (28.0s elapsed)
+05_model_evaluation.ipynb: cell 108 START boosting_preprocessor = clone(preprocessor)
+05_model_evaluation.ipynb: cell 108 PASS (28.1s elapsed)
+05_model_evaluation.ipynb: cell 110 START boosting_model = Pipeline([
+05_model_evaluation.ipynb: cell 110 PASS (28.1s elapsed)
+05_model_evaluation.ipynb: cell 112 START boosting_model.fit(X_train, y_train)
+05_model_evaluation.ipynb: cell 112 PASS (30.2s elapsed)
+05_model_evaluation.ipynb: cell 114 START boosting_probability = boosting_model.predict_proba(X_val)[:, 1]
+05_model_evaluation.ipynb: cell 114 PASS (30.2s elapsed)
+05_model_evaluation.ipynb: cell 116 START boosting_results = []
+05_model_evaluation.ipynb: cell 116 PASS (30.3s elapsed)
+05_model_evaluation.ipynb: cell 118 START boosting_train_probability = (
+05_model_evaluation.ipynb: cell 118 PASS (30.6s elapsed)
+05_model_evaluation.ipynb: cell 122 START boosting_param_grid = {
+05_model_evaluation.ipynb: cell 122 PASS (30.6s elapsed)
+05_model_evaluation.ipynb: cell 124 START from sklearn.model_selection import GridSearchCV, StratifiedKFold
+05_model_evaluation.ipynb: cell 124 PASS (30.7s elapsed)
+05_model_evaluation.ipynb: cell 126 START boosting_search = GridSearchCV(
+05_model_evaluation.ipynb: cell 126 PASS (30.7s elapsed)
+05_model_evaluation.ipynb: cell 128 START boosting_search.fit(X_train, y_train)
+05_model_evaluation.ipynb: cell 128 PASS (52.4s elapsed)
+05_model_evaluation.ipynb: cell 130 START boosting_cv_results = pd.DataFrame(
+05_model_evaluation.ipynb: cell 130 PASS (52.4s elapsed)
+05_model_evaluation.ipynb: cell 132 START tuned_boosting = boosting_search.best_estimator_
+05_model_evaluation.ipynb: cell 132 PASS (52.5s elapsed)
+05_model_evaluation.ipynb: cell 134 START # Compare models 
+05_model_evaluation.ipynb: cell 134 PASS (52.5s elapsed)
+05_model_evaluation.ipynb: cell 136 START tuned_boosting_train_probability = (
+05_model_evaluation.ipynb: cell 136 PASS (52.8s elapsed)
+05_model_evaluation.ipynb: cell 140 START import numpy as np
+05_model_evaluation.ipynb: cell 140 PASS (53.2s elapsed)
+05_model_evaluation.ipynb: cell 141 START # DeLong structural components: each positive's concordance against negatives and vice versa, ties count 1/2.
+05_model_evaluation.ipynb: cell 141 PASS (56.5s elapsed)
+05_model_evaluation.ipynb: cell 142 START rows=[]
+05_model_evaluation.ipynb: cell 142 PASS (56.5s elapsed)
+05_model_evaluation.ipynb: cell 144 START boosting_threshold_results = []
+05_model_evaluation.ipynb: cell 144 PASS (56.5s elapsed)
+05_model_evaluation.ipynb: cell 147 START # Keep the fitted tuned model and choose the recall-focused threshold
+05_model_evaluation.ipynb: cell 147 PASS (56.5s elapsed)
+05_model_evaluation.ipynb: cell 149 START # Estimate readmission risk for each test patient
+05_model_evaluation.ipynb: cell 149 PASS (56.7s elapsed)
+05_model_evaluation.ipynb: cell 151 START # Evaluate ranking performance and decisions at the fixed threshold
+05_model_evaluation.ipynb: cell 151 PASS (56.7s elapsed)
+05_model_evaluation.ipynb: cell 153 START # Show correct predictions, false alerts, and missed readmissions
+05_model_evaluation.ipynb: cell 153 PASS (56.8s elapsed)
+05_model_evaluation.ipynb: cell 155 START import joblib
+05_model_evaluation.ipynb: cell 155 PASS (56.8s elapsed)
+05_model_evaluation.ipynb: cell 157 START from sklearn.metrics import confusion_matrix
+05_model_evaluation.ipynb: cell 157 PASS (56.8s elapsed)
+05_model_evaluation.ipynb: cell 159 START import numpy as np
+05_model_evaluation.ipynb: cell 159 PASS (56.8s elapsed)
+05_model_evaluation.ipynb: cell 162 START # Load the saved pipeline so these audit cells do not require retraining
+05_model_evaluation.ipynb: cell 162 PASS (57.4s elapsed)
+05_model_evaluation.ipynb: cell 164 START # Compare training and held-out performance without refitting
+05_model_evaluation.ipynb: cell 164 PASS (57.4s elapsed)
+05_model_evaluation.ipynb: cell 166 START # Check whether validation scores agree with observed readmission rates
+05_model_evaluation.ipynb: cell 166 PASS (57.5s elapsed)
+05_model_evaluation.ipynb: cell 168 START # Shuffle one input column at a time and measure the change in validation AP
+05_model_evaluation.ipynb: cell 168 PASS (70.1s elapsed)
+05_model_evaluation.ipynb: cell 171 START fairness_dir = Path("reports/final_audit/fairness_explainability")
+05_model_evaluation.ipynb: cell 171 PASS (71.5s elapsed)
+05_model_evaluation.ipynb: cell 174 START # Apply the same global decision policies to race, gender, and age groups
+05_model_evaluation.ipynb: cell 174 PASS (71.6s elapsed)
+05_model_evaluation.ipynb: cell 177 START # Explicit fairness metrics for the two fixed global policies.
+05_model_evaluation.ipynb: cell 177 PASS (71.7s elapsed)
+05_model_evaluation.ipynb: cell 178 START # Descriptive reference-group contrasts, fixed in advance for interpretability.
+05_model_evaluation.ipynb: cell 178 PASS (72.0s elapsed)
+05_model_evaluation.ipynb: cell 180 START # Summarize errors and inspect examples using validation patients
+05_model_evaluation.ipynb: cell 180 PASS (72.0s elapsed)
+05_model_evaluation.ipynb: cell 182 START # Bootstrap the test rows with replacement, keeping the fitted model unchanged
+05_model_evaluation.ipynb: cell 182 PASS (73.5s elapsed)
+05_model_evaluation.ipynb: cell 184 START # Verify exact patient separation using the split manifest and source identifiers.
+05_model_evaluation.ipynb: cell 184 PASS (73.9s elapsed)
+05_model_evaluation.ipynb: cell 187 START # Check training and cross-validation AP as training size increases
+05_model_evaluation.ipynb: cell 187 PASS (81.2s elapsed)
+05_model_evaluation.ipynb: cell 189 START # Save the completed audit tables without changing the model artifact
+05_model_evaluation.ipynb: cell 189 PASS (81.2s elapsed)

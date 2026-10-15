@@ -1,0 +1,31 @@
+# macOS folder metadata
+.DS_Store
+._*
+
+# Jupyter checkpoints and Python caches
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local Python environments
+.venv/
+venv/
+env/
+
+# Local secrets (keep sanitized example files)
+.env
+.env.*
+!.env.example
+!.env.*.example
+.aws/
+
+# Temporary editor and document files
+*.swp
+*.swo
+~$*
+
+# Presentation build intermediates
+.presentation-build/

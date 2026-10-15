@@ -1,0 +1,42 @@
+03_eda.ipynb: cell 2 START import pandas as pd
+03_eda.ipynb: cell 2 PASS (0.8s elapsed)
+03_eda.ipynb: cell 3 START # NOTE: Load only the training split
+03_eda.ipynb: cell 3 PASS (0.9s elapsed)
+03_eda.ipynb: cell 4 START # Create output folder for saved EDA figures
+03_eda.ipynb: cell 4 PASS (0.9s elapsed)
+03_eda.ipynb: cell 6 START # Check for outliers
+03_eda.ipynb: cell 6 PASS (1.0s elapsed)
+03_eda.ipynb: cell 7 START # Plot the numerical variable distribution (histogram) and outliers (boxplots)
+03_eda.ipynb: cell 7 PASS (1.2s elapsed)
+03_eda.ipynb: cell 8 START # Compare numeric variables by 30-day readmission status
+03_eda.ipynb: cell 8 PASS (1.2s elapsed)
+03_eda.ipynb: cell 9 START # Plot boxplot for numeric variables by 30-Day Readmission Status
+03_eda.ipynb: cell 9 PASS (1.3s elapsed)
+03_eda.ipynb: cell 10 START # Compare median values between the two target groups
+03_eda.ipynb: cell 10 PASS (1.3s elapsed)
+03_eda.ipynb: cell 13 START # Define target variable
+03_eda.ipynb: cell 13 PASS (1.4s elapsed)
+03_eda.ipynb: cell 15 START # ID columns as categorical
+03_eda.ipynb: cell 15 PASS (1.4s elapsed)
+03_eda.ipynb: cell 17 START # identify medication categorical columns
+03_eda.ipynb: cell 17 PASS (1.4s elapsed)
+03_eda.ipynb: cell 19 START # Identify medication columns:
+03_eda.ipynb: cell 19 PASS (1.5s elapsed)
+03_eda.ipynb: cell 21 START # Create categorical readmission summary function
+03_eda.ipynb: cell 21 PASS (1.5s elapsed)
+03_eda.ipynb: cell 23 START # Define key categorical variables:
+03_eda.ipynb: cell 23 PASS (1.5s elapsed)
+03_eda.ipynb: cell 25 START # Wilson 95% confidence interval
+03_eda.ipynb: cell 25 PASS (1.6s elapsed)
+03_eda.ipynb: cell 27 START # Plot key columns
+03_eda.ipynb: cell 27 PASS (4.3s elapsed)
+03_eda.ipynb: cell 29 START # Plot diag columns
+03_eda.ipynb: cell 29 PASS (6.5s elapsed)
+03_eda.ipynb: cell 32 START import pandas as pd
+03_eda.ipynb: cell 32 PASS (6.5s elapsed)
+03_eda.ipynb: cell 34 START import csv
+03_eda.ipynb: cell 34 PASS (6.6s elapsed)
+03_eda.ipynb: cell 36 START # Show readable categories
+03_eda.ipynb: cell 36 PASS (6.6s elapsed)
+03_eda.ipynb: cell 38 START 
+03_eda.ipynb: cell 38 PASS (9.0s elapsed)
