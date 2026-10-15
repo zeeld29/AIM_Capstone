@@ -1,7 +1,7 @@
 {
-  "notebook": "03_eda.ipynb",
+  "notebook": "notebooks/03_eda.ipynb",
   "status": "passed",
   "executed_code_cells": 21,
-  "seconds": 8.97,
-  "sha256": "980bdcef0ab092f285dff4377ddbc5e2a999006a75d8e9a9129faadc79981e71"
+  "seconds": 10.76,
+  "sha256": "543e248265d23179ace6a3fd719ca4114d5509b17084c19592e255c86363d5d6"
 }

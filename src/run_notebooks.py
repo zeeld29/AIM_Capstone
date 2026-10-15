@@ -10,8 +10,9 @@ import subprocess
 import sys
 import time
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[1]
 REPORT = ROOT / 'reports/reproducibility'
+NOTEBOOK_DIR = ROOT / 'notebooks'
 NOTEBOOKS = ['01_problem_statement.ipynb', '02_data_cleaning_split.ipynb',
              '03_eda.ipynb', '04_feature_engineering.ipynb',
              '05_model_evaluation.ipynb', '06_final_results_&_conclusions.ipynb']
@@ -24,7 +25,7 @@ def execute_notebook(filename):
     from IPython.core.interactiveshell import InteractiveShell
     from IPython.utils.capture import capture_output
     from IPython.display import display
-    notebook = nbformat.read(ROOT / filename, as_version=4)
+    notebook = nbformat.read(NOTEBOOK_DIR / filename, as_version=4)
     shell = InteractiveShell.instance()
     shell.user_ns['display'] = display
     def show_figures(*args, **kwargs):
@@ -62,15 +63,15 @@ def execute_notebook(filename):
         cell.outputs = outputs
         executed += 1
         cell.execution_count = executed
-        nbformat.write(notebook, ROOT / filename)
+        nbformat.write(notebook, NOTEBOOK_DIR / filename)
         if error:
             print(captured.stdout, flush=True)
             raise RuntimeError(f'{filename}, cell {position + 1}: {type(error).__name__}: {error}')
         print(f'{filename}: cell {position + 1} PASS ({time.monotonic() - start:.1f}s elapsed)', flush=True)
     nbformat.validate(notebook)
-    return {'notebook': filename, 'status': 'passed', 'executed_code_cells': executed,
+    return {'notebook': f'notebooks/{filename}', 'status': 'passed', 'executed_code_cells': executed,
             'seconds': round(time.monotonic() - start, 2),
-            'sha256': hashlib.sha256((ROOT / filename).read_bytes()).hexdigest()}
+            'sha256': hashlib.sha256((NOTEBOOK_DIR / filename).read_bytes()).hexdigest()}
 
 def main():
     parser = argparse.ArgumentParser()

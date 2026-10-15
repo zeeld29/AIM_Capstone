@@ -1,7 +1,7 @@
 {
-  "notebook": "06_final_results_&_conclusions.ipynb",
+  "notebook": "notebooks/06_final_results_&_conclusions.ipynb",
   "status": "passed",
   "executed_code_cells": 3,
   "seconds": 0.46,
-  "sha256": "1071c2454f2aa83b9de5ce45cc7f45b2fc49b49022216b1e962e0bdb8bd55bae"
+  "sha256": "050d6deb9fee764cfdd61920e62f6a28d14bb7a999f7383a111f21fbb0781576"
 }

@@ -1,8 +1,7 @@
 {
-  "notebook": "02_data_cleaning_split.ipynb",
+  "notebook": "notebooks/02_data_cleaning_split.ipynb",
   "status": "passed",
   "executed_code_cells": 32,
-  "seconds": 3.41,
-  "sha256": "827375dbfe013a26a3609d8f1cffd0cadda02092da2fe316c9e53720b3ab204f",
-  "post_execution_update": "Path display statements and saved outputs normalized to relative paths; analysis unchanged."
+  "seconds": 3.25,
+  "sha256": "53038bcc392e4d065aa4d6f101af862e7ec63c350bfefd151b4929944f0f9e72"
 }

@@ -1,4 +1,4 @@
-06_final_results_&_conclusions.ipynb: cell 3 START from pathlib import Path
+06_final_results_&_conclusions.ipynb: cell 3 START # Resolve project paths when launched from the root or notebooks/ folder.
 06_final_results_&_conclusions.ipynb: cell 3 PASS (0.2s elapsed)
 06_final_results_&_conclusions.ipynb: cell 4 START from pathlib import Path
 06_final_results_&_conclusions.ipynb: cell 4 PASS (0.2s elapsed)

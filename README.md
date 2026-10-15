@@ -4,14 +4,14 @@ This retrospective capstone predicts recorded readmission within 30 days using i
 
 ## Notebook order
 
-Run notebooks from the project folder in this order:
+Open the notebooks in `notebooks/` and run them in this order. Their first code cells locate the repository root, so data paths work from either the root or the `notebooks/` folder:
 
-1. `01_problem_statement.ipynb`: objective, target, and success criteria.
-2. `02_data_cleaning_split.ipynb`: cleaning, target creation, diagnosis groups, and stratified splits.
-3. `03_eda.ipynb`: training-data exploration.
-4. `04_feature_engineering.ipynb`: fixed row-level features for all splits.
-5. `05_model_evaluation.ipynb`: model comparison, tuning, final results, and executed audits.
-6. `06_final_results_&_conclusions.ipynb`: refreshed final results and conclusions, incorporating the completed notebook 5 audits and saved audit reports.
+1. `notebooks/01_problem_statement.ipynb`: objective, target, and success criteria.
+2. `notebooks/02_data_cleaning_split.ipynb`: cleaning, target creation, diagnosis groups, and stratified splits.
+3. `notebooks/03_eda.ipynb`: training-data exploration.
+4. `notebooks/04_feature_engineering.ipynb`: fixed row-level features for all splits.
+5. `notebooks/05_model_evaluation.ipynb`: model comparison, tuning, final results, and executed audits.
+6. `notebooks/06_final_results_&_conclusions.ipynb`: refreshed final results and conclusions, incorporating the completed notebook 5 audits and saved audit reports.
 
 The notebooks are numbered 01 through 06. EDA and feature engineering remain separate: notebook 03 explores training data, while notebook 04 applies the same feature formulas to all splits. Re-running earlier notebooks can overwrite processed files, reports, and the fitted model. Use the intended kernel and run cells in order.
 
@@ -29,9 +29,12 @@ This project was verified using Python 3.13.12 and the package versions listed i
 - `reports/figures/`: saved EDA charts.
 - `Data_Dictionary.md`: complete variable definitions, cleaning rules, engineered features, and administrative ID mappings.
 - `capstone_presentation/`: supplied 12-slide technical and 11-slide business PowerPoints, technical notebook slideshow, and presentation rubric review.
-- `reports/significance_analysis/`: all 30 paired candidate-model comparisons and the standalone analysis script.
+- `reports/significance_analysis/`: all 30 paired candidate-model comparisons and saved statistical results.
 - `reports/final_audit/fairness_explainability/`: parity metrics, uncertainty contrasts, PDP/ICE tables and figures.
-- `reports/reproducibility/`: ordered execution runner, logs and verification results.
+- `reports/reproducibility/`: execution logs and verification results.
+- `src/run_notebooks.py`: ordered notebook execution runner.
+- `src/run_analysis.py`: standalone significance analysis script.
+- `notebooks/`: analysis notebooks 01–06.
 
 The final audit section loads the existing saved model. It does not replace it or change threshold 0.10. Learning curves fit fresh copies on training folds only. Test subgroup and bootstrap results describe the fixed model and must not guide new model selection.
 
@@ -63,7 +66,7 @@ Author, course and dataset references are completed in notebook 01. Preserve the
 
 ## Ordered execution verification
 
-Run `python reports/reproducibility/run_notebooks.py` from the project root in the AIM environment. The runner starts a fresh IPython process for each notebook, executes every code cell in file order, captures outputs, and stops on the first error. It writes `execution_summary.json` and per-notebook progress logs under `reports/reproducibility/`. A full run regenerates processed splits, reports and the fitted model using the recorded settings. Notebook 03 exports PNGs through Kaleido and requires a compatible Chrome/Chromium installation.
+Run `python src/run_notebooks.py` from the project root in the AIM environment. The runner starts a fresh IPython process for each notebook, executes every code cell in file order, captures outputs, and stops on the first error. It writes `execution_summary.json` and per-notebook progress logs under `reports/reproducibility/`. A full run regenerates processed splits, reports and the fitted model using the recorded settings. Notebook 03 exports PNGs through Kaleido and requires a compatible Chrome/Chromium installation.
 
 The ordered run verified on **15 October 2026** completed all six notebooks without code-cell errors. The workflow includes training-only medication exclusions and an exact patient split manifest. Candidate comparisons were regenerated; the final test performance is checked in the current verification report. See `reports/reproducibility/execution_summary.json` and `verification_checks.json` for evidence.
 
@@ -80,3 +83,23 @@ The presentation folder contains the author’s decks updated against the curren
 Source: Clore, J., Cios, K., DeShazo, J., & Strack, B. (2014). *Diabetes 130-US Hospitals for Years 1999–2008*. UCI Machine Learning Repository. https://doi.org/10.24432/C5230J.
 
 The source dataset is licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). The processed data in this repository derive from that dataset through cohort filtering, cleaning, target creation and feature engineering documented in notebooks 02 and 04. The dataset license applies to the data and does not automatically license this project's code or presentations.
+
+## Repository structure
+
+```text
+AIM_Capstone/
+├── src/                     # Runnable Python scripts
+├── notebooks/               # Analysis notebooks 01–06
+├── data/                    # Raw, processed and split data
+├── models/                  # Saved fitted pipeline
+├── reports/                 # Metrics, figures and execution evidence
+├── capstone_presentation/   # Technical/business decks and slideshow
+├── Data_Dictionary.md
+├── README.md
+├── requirements.txt
+└── .gitignore
+```
+
+From the repository root, run the complete workflow with `python src/run_notebooks.py`. To execute one notebook, use `python src/run_notebooks.py --notebook 05_model_evaluation.ipynb` after its input files have been generated. The runner locates notebooks under `notebooks/` and writes outputs under `data/`, `models/` and `reports/`.
+
+The optional `python src/run_analysis.py` regenerates statistical-comparison reports using the current notebook definitions and saved final model. It reconstructs the notebook’s tuned random forest and checks candidate scores against the saved notebook report before overwriting comparisons. It locates the repository independently of the terminal's current directory. The presentation slideshow stays with the presentation files because it is a delivery artifact, separate from the analysis workflow.

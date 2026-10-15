@@ -22,5 +22,69 @@
       "Patients flagged": "2932",
       "Flagged (%)": "27.934451219512198"
     }
-  ]
+  ],
+  "repository_structure": {
+    "scripts": "src/",
+    "analysis_notebooks": "notebooks/",
+    "data": "data/",
+    "models": "models/"
+  },
+  "notebooks": [
+    {
+      "notebook": "notebooks/01_problem_statement.ipynb",
+      "executed_cells": 0,
+      "errors": 0,
+      "sha256": "911a7a77a6fa915a1b9aacec90ff541d4127f2eebb2cf7b500c5c8f12ab040fe"
+    },
+    {
+      "notebook": "notebooks/02_data_cleaning_split.ipynb",
+      "executed_cells": 32,
+      "errors": 0,
+      "sha256": "53038bcc392e4d065aa4d6f101af862e7ec63c350bfefd151b4929944f0f9e72"
+    },
+    {
+      "notebook": "notebooks/03_eda.ipynb",
+      "executed_cells": 21,
+      "errors": 0,
+      "sha256": "543e248265d23179ace6a3fd719ca4114d5509b17084c19592e255c86363d5d6"
+    },
+    {
+      "notebook": "notebooks/04_feature_engineering.ipynb",
+      "executed_cells": 15,
+      "errors": 0,
+      "sha256": "ae900d8fafeb4599a1957df3d6ebccaa3417471c1bd3b71b865df3ff80bcceca"
+    },
+    {
+      "notebook": "notebooks/05_model_evaluation.ipynb",
+      "executed_cells": 86,
+      "errors": 0,
+      "sha256": "2ccbde2d8159c5ed7876e1346a63ff210c8956ce9b0819432d605f33f7d3d3f7"
+    },
+    {
+      "notebook": "notebooks/06_final_results_&_conclusions.ipynb",
+      "executed_cells": 3,
+      "errors": 0,
+      "sha256": "050d6deb9fee764cfdd61920e62f6a28d14bb7a999f7383a111f21fbb0781576"
+    }
+  ],
+  "structure_artifact_checks": {
+    "data/processed/train_fe.csv": true,
+    "data/processed/val.csv": true,
+    "data/processed/test.csv": true,
+    "data/processed/diabetic_clean.csv": true,
+    "data/processed/train.csv": true,
+    "data/processed/val_fe.csv": true,
+    "data/processed/split_patient_manifest.csv": true,
+    "data/processed/diabetic_cleaned_final.csv": true,
+    "data/processed/test_fe.csv": true,
+    "reports/final_gradient_boosting_test_metrics.csv": true,
+    "reports/final_audit/policy_comparison.csv": true,
+    "reports/final_audit/patient_identity_checks.csv": true
+  },
+  "standalone_analysis_checks": {
+    "script": "src/run_analysis.py",
+    "status": "passed",
+    "tuned_random_forest_reconstructed": true,
+    "candidate_scores_match_notebook_report": true
+  }
 }

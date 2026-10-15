@@ -1,0 +1,12 @@
+{
+  "validation_n": 10496,
+  "validation_positives": 942,
+  "bootstrap_resamples": 5000,
+  "seed": 20261012,
+  "test_n": 10496,
+  "test_positives": 942,
+  "top20_selected": 2100,
+  "top20_hits": 369,
+  "random_selection_one_sided_p": 2.448458960606271e-46,
+  "notebooks_unchanged": true
+}

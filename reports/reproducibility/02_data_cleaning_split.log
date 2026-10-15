@@ -1,64 +1,64 @@
-02_data_cleaning_split.ipynb: cell 2 START #1. Import necessary libraries
-02_data_cleaning_split.ipynb: cell 2 PASS (1.1s elapsed)
+02_data_cleaning_split.ipynb: cell 2 START # Resolve project paths when launched from the root or notebooks/ folder.
+02_data_cleaning_split.ipynb: cell 2 PASS (1.0s elapsed)
 02_data_cleaning_split.ipynb: cell 3 START #2. Load the dataset
-02_data_cleaning_split.ipynb: cell 3 PASS (1.4s elapsed)
+02_data_cleaning_split.ipynb: cell 3 PASS (1.2s elapsed)
 02_data_cleaning_split.ipynb: cell 4 START #3. Dataset dimensions
-02_data_cleaning_split.ipynb: cell 4 PASS (1.4s elapsed)
+02_data_cleaning_split.ipynb: cell 4 PASS (1.2s elapsed)
 02_data_cleaning_split.ipynb: cell 5 START #4. Inspect few rows
-02_data_cleaning_split.ipynb: cell 5 PASS (1.4s elapsed)
+02_data_cleaning_split.ipynb: cell 5 PASS (1.2s elapsed)
 02_data_cleaning_split.ipynb: cell 6 START #5. Data types
-02_data_cleaning_split.ipynb: cell 6 PASS (1.4s elapsed)
+02_data_cleaning_split.ipynb: cell 6 PASS (1.2s elapsed)
 02_data_cleaning_split.ipynb: cell 7 START #6. Descriptive Statistics
-02_data_cleaning_split.ipynb: cell 7 PASS (1.5s elapsed)
+02_data_cleaning_split.ipynb: cell 7 PASS (1.3s elapsed)
 02_data_cleaning_split.ipynb: cell 8 START #7. Check for missing values
-02_data_cleaning_split.ipynb: cell 8 PASS (1.5s elapsed)
+02_data_cleaning_split.ipynb: cell 8 PASS (1.3s elapsed)
 02_data_cleaning_split.ipynb: cell 9 START #8. Check for Duplicate rows
-02_data_cleaning_split.ipynb: cell 9 PASS (1.5s elapsed)
+02_data_cleaning_split.ipynb: cell 9 PASS (1.4s elapsed)
 02_data_cleaning_split.ipynb: cell 10 START #9. Check target variable ('readmitted') distribution
-02_data_cleaning_split.ipynb: cell 10 PASS (1.5s elapsed)
+02_data_cleaning_split.ipynb: cell 10 PASS (1.4s elapsed)
 02_data_cleaning_split.ipynb: cell 12 START # 10
-02_data_cleaning_split.ipynb: cell 12 PASS (1.5s elapsed)
+02_data_cleaning_split.ipynb: cell 12 PASS (1.4s elapsed)
 02_data_cleaning_split.ipynb: cell 13 START # 11
-02_data_cleaning_split.ipynb: cell 13 PASS (1.6s elapsed)
+02_data_cleaning_split.ipynb: cell 13 PASS (1.4s elapsed)
 02_data_cleaning_split.ipynb: cell 14 START # 12
-02_data_cleaning_split.ipynb: cell 14 PASS (1.6s elapsed)
+02_data_cleaning_split.ipynb: cell 14 PASS (1.5s elapsed)
 02_data_cleaning_split.ipynb: cell 15 START # 13
-02_data_cleaning_split.ipynb: cell 15 PASS (1.7s elapsed)
+02_data_cleaning_split.ipynb: cell 15 PASS (1.6s elapsed)
 02_data_cleaning_split.ipynb: cell 17 START # 14
-02_data_cleaning_split.ipynb: cell 17 PASS (1.8s elapsed)
+02_data_cleaning_split.ipynb: cell 17 PASS (1.6s elapsed)
 02_data_cleaning_split.ipynb: cell 18 START # 15
-02_data_cleaning_split.ipynb: cell 18 PASS (1.8s elapsed)
+02_data_cleaning_split.ipynb: cell 18 PASS (1.6s elapsed)
 02_data_cleaning_split.ipynb: cell 19 START # 16
-02_data_cleaning_split.ipynb: cell 19 PASS (1.8s elapsed)
+02_data_cleaning_split.ipynb: cell 19 PASS (1.6s elapsed)
 02_data_cleaning_split.ipynb: cell 20 START # 18
-02_data_cleaning_split.ipynb: cell 20 PASS (1.8s elapsed)
+02_data_cleaning_split.ipynb: cell 20 PASS (1.6s elapsed)
 02_data_cleaning_split.ipynb: cell 21 START # 19
-02_data_cleaning_split.ipynb: cell 21 PASS (1.8s elapsed)
+02_data_cleaning_split.ipynb: cell 21 PASS (1.6s elapsed)
 02_data_cleaning_split.ipynb: cell 22 START # 20
-02_data_cleaning_split.ipynb: cell 22 PASS (1.8s elapsed)
+02_data_cleaning_split.ipynb: cell 22 PASS (1.7s elapsed)
 02_data_cleaning_split.ipynb: cell 23 START # 21
-02_data_cleaning_split.ipynb: cell 23 PASS (1.9s elapsed)
+02_data_cleaning_split.ipynb: cell 23 PASS (1.7s elapsed)
 02_data_cleaning_split.ipynb: cell 24 START # 22
-02_data_cleaning_split.ipynb: cell 24 PASS (1.9s elapsed)
+02_data_cleaning_split.ipynb: cell 24 PASS (1.8s elapsed)
 02_data_cleaning_split.ipynb: cell 25 START # Export cleaned data
-02_data_cleaning_split.ipynb: cell 25 PASS (2.2s elapsed)
+02_data_cleaning_split.ipynb: cell 25 PASS (2.0s elapsed)
 02_data_cleaning_split.ipynb: cell 27 START # Load preprocessed data
-02_data_cleaning_split.ipynb: cell 27 PASS (2.4s elapsed)
+02_data_cleaning_split.ipynb: cell 27 PASS (2.2s elapsed)
 02_data_cleaning_split.ipynb: cell 28 START # Removes invalid-gender rows, fixes splits, learns medication exclusions from training only, and prepares the target. 
-02_data_cleaning_split.ipynb: cell 28 PASS (2.6s elapsed)
+02_data_cleaning_split.ipynb: cell 28 PASS (2.4s elapsed)
 02_data_cleaning_split.ipynb: cell 29 START # Maps diagnosis codes into broad groups, with diabetes checked before the wider endocrine range. 
-02_data_cleaning_split.ipynb: cell 29 PASS (2.7s elapsed)
+02_data_cleaning_split.ipynb: cell 29 PASS (2.5s elapsed)
 02_data_cleaning_split.ipynb: cell 30 START for col in ["diag_1_group", "diag_2_group", "diag_3_group"]:
-02_data_cleaning_split.ipynb: cell 30 PASS (2.7s elapsed)
+02_data_cleaning_split.ipynb: cell 30 PASS (2.5s elapsed)
 02_data_cleaning_split.ipynb: cell 31 START # Check distribution of diagnosis codes and their corresponding groups
-02_data_cleaning_split.ipynb: cell 31 PASS (2.7s elapsed)
+02_data_cleaning_split.ipynb: cell 31 PASS (2.6s elapsed)
 02_data_cleaning_split.ipynb: cell 32 START # Drop diag_1, diag_2, and diag_3
-02_data_cleaning_split.ipynb: cell 32 PASS (2.7s elapsed)
+02_data_cleaning_split.ipynb: cell 32 PASS (2.6s elapsed)
 02_data_cleaning_split.ipynb: cell 33 START df_preprocessed.info()
-02_data_cleaning_split.ipynb: cell 33 PASS (2.7s elapsed)
+02_data_cleaning_split.ipynb: cell 33 PASS (2.6s elapsed)
 02_data_cleaning_split.ipynb: cell 34 START # 5. Save (same path style your notebook already uses)
-02_data_cleaning_split.ipynb: cell 34 PASS (3.0s elapsed)
+02_data_cleaning_split.ipynb: cell 34 PASS (2.8s elapsed)
 02_data_cleaning_split.ipynb: cell 37 START # Imports stratified splitting. Stratification keeps the positive-class share similar across training, validation, and test data.
-02_data_cleaning_split.ipynb: cell 37 PASS (3.0s elapsed)
+02_data_cleaning_split.ipynb: cell 37 PASS (2.8s elapsed)
 02_data_cleaning_split.ipynb: cell 38 START # Test, train, validation
-02_data_cleaning_split.ipynb: cell 38 PASS (3.4s elapsed)
+02_data_cleaning_split.ipynb: cell 38 PASS (3.2s elapsed)

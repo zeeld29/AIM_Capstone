@@ -1,23 +1,23 @@
-04_feature_engineering.ipynb: cell 1 START # Import Libraries
+04_feature_engineering.ipynb: cell 1 START # Resolve project paths when launched from the root or notebooks/ folder.
 04_feature_engineering.ipynb: cell 1 PASS (0.2s elapsed)
 04_feature_engineering.ipynb: cell 2 START # Loads the existing training, validation, and test splits. 
 04_feature_engineering.ipynb: cell 2 PASS (0.3s elapsed)
 04_feature_engineering.ipynb: cell 3 START # Creates copies so engineered features can be added without overwriting the original split DataFrames. Split membership is preserved.
 04_feature_engineering.ipynb: cell 3 PASS (0.3s elapsed)
 04_feature_engineering.ipynb: cell 4 START # convert age to numerical (midpoints)
-04_feature_engineering.ipynb: cell 4 PASS (0.3s elapsed)
+04_feature_engineering.ipynb: cell 4 PASS (0.4s elapsed)
 04_feature_engineering.ipynb: cell 5 START # calculate total previous healthcare utilization
-04_feature_engineering.ipynb: cell 5 PASS (0.3s elapsed)
+04_feature_engineering.ipynb: cell 5 PASS (0.4s elapsed)
 04_feature_engineering.ipynb: cell 6 START # Flag previous inpatient encounters
-04_feature_engineering.ipynb: cell 6 PASS (0.3s elapsed)
+04_feature_engineering.ipynb: cell 6 PASS (0.4s elapsed)
 04_feature_engineering.ipynb: cell 7 START # List the retained medication columns
-04_feature_engineering.ipynb: cell 7 PASS (0.3s elapsed)
+04_feature_engineering.ipynb: cell 7 PASS (0.4s elapsed)
 04_feature_engineering.ipynb: cell 8 START # Check medication values 
-04_feature_engineering.ipynb: cell 8 PASS (0.3s elapsed)
+04_feature_engineering.ipynb: cell 8 PASS (0.4s elapsed)
 04_feature_engineering.ipynb: cell 9 START # checks that all medication entries use the expected labels before we count them.
-04_feature_engineering.ipynb: cell 9 PASS (0.3s elapsed)
+04_feature_engineering.ipynb: cell 9 PASS (0.4s elapsed)
 04_feature_engineering.ipynb: cell 10 START # Insulin use
-04_feature_engineering.ipynb: cell 10 PASS (0.3s elapsed)
+04_feature_engineering.ipynb: cell 10 PASS (0.4s elapsed)
 04_feature_engineering.ipynb: cell 11 START # Count diabetes diagnoses
 04_feature_engineering.ipynb: cell 11 PASS (0.4s elapsed)
 04_feature_engineering.ipynb: cell 12 START # Check new features

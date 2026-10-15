@@ -1,7 +1,7 @@
 {
-  "notebook": "01_problem_statement.ipynb",
+  "notebook": "notebooks/01_problem_statement.ipynb",
   "status": "passed",
   "executed_code_cells": 0,
   "seconds": 0.0,
-  "sha256": "af08c2cf7bf15abaf2b234b2ab25a14b08e4845524021fbc67e0ca1d23cc7561"
+  "sha256": "911a7a77a6fa915a1b9aacec90ff541d4127f2eebb2cf7b500c5c8f12ab040fe"
 }

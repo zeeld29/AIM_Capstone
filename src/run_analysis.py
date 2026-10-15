@@ -1,3 +1,4 @@
+"""Regenerate paired validation comparisons and reports from the saved analysis."""
 import os
 os.environ['OMP_NUM_THREADS']='4'
 os.environ['OPENBLAS_NUM_THREADS']='4'
@@ -8,22 +9,31 @@ import pandas as pd
 import joblib
 from scipy.stats import norm, hypergeom
 from sklearn.metrics import average_precision_score, roc_auc_score
-nb=Path('05_model_evaluation.ipynb')
-notebooks={str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in Path('.').glob('*.ipynb')}
+ROOT = Path(__file__).resolve().parents[1]
+os.chdir(ROOT)
+nb=ROOT / 'notebooks/05_model_evaluation.ipynb'
+notebooks={str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in Path('notebooks').glob('*.ipynb')}
 n=json.loads(nb.read_text()); ns={}
 # Execute only data loading, pipeline definitions and candidate fitting; no notebook save/export cells.
-for i in [2,4,6,8,10,12,14,16,18,21,25,42,44,46,48,57,59,61,71,73,75,105,107,109,111]:
+for i in [2,4,6,8,10,12,14,16,18,21,25,42,44,46,48,57,59,61,71,73,75,84,86,88,90,92,105,107,109,111]:
  print('Reconstruct cell',i,flush=True)
  exec(''.join(n['cells'][i]['source']),ns)
+ns['tuned_forest'] = ns['search'].best_estimator_
 artifact=joblib.load('models/final_gradient_boosting.joblib')
 print('Artifact keys',list(artifact),flush=True)
 final=artifact.get('pipeline',artifact.get('model'))
-models={'Logistic full':ns['logistic_model'],'Logistic selected':ns['selected_model'],'Logistic SVD':ns['svd_model'],'Tuned random forest':ns['forest_model'],'Original boosting':ns['boosting_model'],'Tuned boosting':final}
+models={'Logistic full':ns['logistic_model'],'Logistic selected':ns['selected_model'],'Logistic SVD':ns['svd_model'],'Tuned random forest':ns['tuned_forest'],'Original boosting':ns['boosting_model'],'Tuned boosting':final}
 y=np.asarray(ns['y_val']); scores={k:m.predict_proba(ns['X_val'])[:,1] for k,m in models.items()}
 # Compute current validation scores; historical point estimates are not assertions.
 points=np.array([[average_precision_score(y,s),roc_auc_score(y,s)] for s in scores.values()])
+# Refuse to overwrite notebook reports if candidate reconstruction differs.
+recorded_path = ROOT / 'reports/significance_analysis/validation_metrics.csv'
+if recorded_path.exists():
+ recorded = pd.read_csv(recorded_path, index_col=0).loc[list(models), ['AP', 'ROC-AUC']]
+ assert np.allclose(points, recorded.to_numpy(), rtol=0, atol=1e-12), 'Standalone candidates do not match current notebook validation scores.'
 print('Current validation scores',points,flush=True)
-out=Path('reports/significance_analysis')
+out=ROOT / 'reports/significance_analysis'
+out.mkdir(parents=True, exist_ok=True)
 pd.DataFrame({'label':y,**scores}).to_csv(out/'validation_predictions.csv',index=False)
 # DeLong structural components: each positive's concordance against negatives and vice versa, ties count 1/2.
 vpos=[];vneg=[]
