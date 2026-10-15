@@ -3,5 +3,6 @@
   "status": "passed",
   "executed_code_cells": 32,
   "seconds": 3.41,
-  "sha256": "f8efe1218e5a8f174081604822edf91c2035429cbf043f05af2f7b305a0ebbd7"
+  "sha256": "827375dbfe013a26a3609d8f1cffd0cadda02092da2fe316c9e53720b3ab204f",
+  "post_execution_update": "Path display statements and saved outputs normalized to relative paths; analysis unchanged."
 }

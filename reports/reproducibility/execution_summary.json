@@ -15,7 +15,7 @@
       "status": "passed",
       "executed_code_cells": 32,
       "seconds": 3.41,
-      "sha256": "f8efe1218e5a8f174081604822edf91c2035429cbf043f05af2f7b305a0ebbd7"
+      "sha256": "827375dbfe013a26a3609d8f1cffd0cadda02092da2fe316c9e53720b3ab204f"
     },
     {
       "notebook": "03_eda.ipynb",
@@ -47,5 +47,5 @@
     }
   ],
   "verified_client_date": "2026-10-15",
-  "notes": "All six notebooks executed in order. Markdown metric summaries refreshed afterward; code unchanged after execution."
+  "notes": "All six notebooks executed in order. Markdown metric summaries refreshed afterward; code unchanged after execution. Notebook 02 subsequently changed only path display statements and normalized their saved outputs to relative paths; analysis code and data unchanged."
 }

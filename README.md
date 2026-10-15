@@ -28,8 +28,7 @@ This project was verified using Python 3.13.12 and the package versions listed i
 - `reports/final_audit/`: nine completed audit tables covering calibration, permutation importance, subgroup results, uncertainty intervals, identity checks, split performance, policy comparisons, and learning curves.
 - `reports/figures/`: saved EDA charts.
 - `Data_Dictionary.md`: complete variable definitions, cleaning rules, engineered features, and administrative ID mappings.
-- `capstone_presentation/Diabetes_Readmission_Capstone.pptx`: editable five-slide presentation.
-- `.presentation-build/`: presentation intermediate artifacts, outside the main notebook workflow.
+- `capstone_presentation/`: supplied 12-slide technical and 11-slide business PowerPoints, technical notebook slideshow, and presentation rubric review.
 - `reports/significance_analysis/`: all 30 paired candidate-model comparisons and the standalone analysis script.
 - `reports/final_audit/fairness_explainability/`: parity metrics, uncertainty contrasts, PDP/ICE tables and figures.
 - `reports/reproducibility/`: ordered execution runner, logs and verification results.
@@ -74,4 +73,10 @@ Notebook 02 fixes stratified split membership before calculating medication freq
 
 `data/processed/split_patient_manifest.csv` records Split, Row (zero-based saved split row order), patient_nbr and encounter_id. It is an audit artifact, never a model input. Notebook 05 checks unique patients/encounters, source-row alignment, complete coverage and zero patient overlap directly.
 
-The presentation decks predate the training-only medication update; use the regenerated notebook model-comparison tables for current candidate metrics and feature counts.
+The presentation folder contains the author’s decks updated against the current reports. The technical notebook matches the revised 12-slide technical deck. The 11-slide business deck includes explicitly hypothetical ROI scenarios. See `capstone_presentation/Presentation_Rubric_Review.md` for rubric coverage and remaining submission checks.
+
+## Dataset source and license
+
+Source: Clore, J., Cios, K., DeShazo, J., & Strack, B. (2014). *Diabetes 130-US Hospitals for Years 1999–2008*. UCI Machine Learning Repository. https://doi.org/10.24432/C5230J.
+
+The source dataset is licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). The processed data in this repository derive from that dataset through cohort filtering, cleaning, target creation and feature engineering documented in notebooks 02 and 04. The dataset license applies to the data and does not automatically license this project's code or presentations.
